@@ -36,8 +36,24 @@ ip.addr == 10.21.78.111
 we can check the ip address, Then we check on the info that have `(text/html)`. On that packet, we check the Hypertext Transfer Protocol and we get the server name that is `gunicorn`
 
 # Flag 3
+![Part 1](https://cdn.discordapp.com/attachments/1153305482438660178/1153331540068155452/Screen_Shot_2023-09-18_at_21.06.51.png)
+![Terminal](https://cdn.discordapp.com/attachments/1153305482438660178/1153331504689197137/Screen_Shot_2023-09-18_at_21.07.33.png)
+
+Explanation:
+Use the query below:
+```
+ip.dst == 239.255.255.250 && udp.dstport == 3702
+```
+After filtering the wireshark using the given query, we can see how many package are from ip = 239.255.255.259 and the port is 3702. We can actually see the protocol used in the problem is UDP.
 
 # Flag 4
+![Part 1](https://cdn.discordapp.com/attachments/1153305482438660178/1153320386969223269/Screen_Shot_2023-09-18_at_20.23.16.png)
+![Terminal](https://cdn.discordapp.com/attachments/1153305482438660178/1153320213769633862/Screen_Shot_2023-09-18_at_20.21.58.png)
+
+Explanation:
+To actually solve this problem, we just need to go to number 130 and see the details in the User Datagram Protocol where there is Checksum = 0x18e5
+
+
 
 # Flag 5
 
@@ -65,6 +81,14 @@ tcp.dstport == 80 || udp.dstport == 80
 because we need to find the port of the destination of tcp or udp either way
 
 # Flag 9
+![Terminal](https://cdn.discordapp.com/attachments/1153305482438660178/1153322228977516696/Screen_Shot_2023-09-18_at_20.30.31.png)
+
+Explanation:
+In order to find the package that we want, we need to create a query that can sort the IP source and IP destination. The answer can be seen below
+```
+ip.src == 10.51.40.1 && ip.dst != 10.39.55.34
+```
+IP.src == 10.51.40.1 means that it filter the IP with the source of 10.51.40.1, while IP.dst != 10.39.55.34 is to filter where the IP destination is not 10.39.55.34
 
 # Flag 10
 ![Part 1](https://media.discordapp.net/attachments/1153305482438660178/1154417029923737720/image.png?width=1248&height=702)
