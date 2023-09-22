@@ -55,7 +55,18 @@ To actually solve this problem, we just need to go to number 130 and see the det
 
 
 
-# Flag 5
+# Flag 5 (Revisi)
+![Part 1](https://media.discordapp.net/attachments/1153305482438660178/1154663584513658930/image.png?width=936&height=701)
+![Part 2](https://media.discordapp.net/attachments/1153305482438660178/1154663643825319976/image.png?width=705&height=517)
+![Part 3](https://media.discordapp.net/attachments/1153305482438660178/1154663827770724362/image.png?width=554&height=701)
+![Part 4](https://media.discordapp.net/attachments/1153305482438660178/1154663939393724508/image.png?width=599&height=631)
+![Part 5](https://media.discordapp.net/attachments/1153305482438660178/1154664579520024597/image.png?width=612&height=128)
+![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154665179099963413/image.png?width=705&height=219)
+
+In this flag, we need to find the zip password to see the inside of the txt file using the pcap file and export an SMTP file, then decode it using a base64 decoder. 
+This is to get the terminal command, which is `nc 10.21.78 1111`, Then we proceeded to answer some of the questions.
+The answer to question A is 60 packets. The B answer is 25. With the help of Google, we found that SMPT port is 25. C answer is the public IP which is `74.53.140.153`. 
+We can check them because all the IPs other than that is a private.
 
 # Flag 6
 
@@ -64,11 +75,11 @@ To actually solve this problem, we just need to go to number 130 and see the det
 ![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154416089908916375/Screenshot_2023-09-18_192001.png?width=899&height=150)
 
 Explanation :
-With query below, we can check how many packet we get from the query
+With the query below, we can check how many packets we get from the query
 ```
 ip.dst == 184.87.193.88
 ```
-Then we will know how many packet inside with this one being 6
+Then we will know how many packets are inside, with this one being 6
 
 # Flag 8
 ![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154416417022681188/image.png?width=583&height=105)
@@ -78,7 +89,7 @@ We use the query below to answer the question
 ```
 tcp.dstport == 80 || udp.dstport == 80
 ```
-because we need to find the port of the destination of tcp or udp either way
+because we need to find the port of the destination of TCP or UDP either way
 
 # Flag 9
 ![Terminal](https://cdn.discordapp.com/attachments/1153305482438660178/1153322228977516696/Screen_Shot_2023-09-18_at_20.30.31.png)
