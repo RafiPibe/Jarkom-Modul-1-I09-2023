@@ -1,5 +1,6 @@
 ## Jarkom-Modul-Y-I09-2023
 Praktikum Jaringan Komputer Modul 1 I09
+Computer Network Practicum 1st Module I09
 
 | Name                        | NRP        |
 |-----------------------------|------------|
@@ -12,9 +13,27 @@ Praktikum Jaringan Komputer Modul 1 I09
 ![Part 2](https://media.discordapp.net/attachments/1153305482438660178/1154401069108052009/Screenshot_2023-09-18_211641.png?width=1246&height=702)
 ![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154401069443579975/Screenshot_2023-09-18_211740.png?width=1110&height=532)
 
+Explanation :
+Using query such as below
+```
+ftp
+```
+we can check the FTP protocol to see the sequence numbers and acknowledge number.
+on point a we are told to answer what is the sequence number (raw) on the packet with the answer being `258040667`.
+Then point b, we are told to answer the acknowledge number (raw) on the packet with the answer being `1044861039`.
+after that, we are needed to search the response of the activity, that is the number after 147, and that is 149.
+with the question the same as before but this time being the response, c and d answer is `1044861039` and `258040696` respectively.
+
 # Flag 2
 ![Part 1](https://media.discordapp.net/attachments/1153305482438660178/1154404132258582619/Screenshot_2023-09-18_201544.png?width=1248&height=702)
 ![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154404132510244865/Screenshot_2023-09-18_193744.png?width=1020&height=150)
+
+Explanation :
+Using query such as below
+```
+ip.addr == 10.21.78.111
+```
+we can check the ip address, Then we check on the info that have `(text/html)`. On that packet, we check the Hypertext Transfer Protocol and we get the server name that is `gunicorn`
 
 # Flag 3
 
@@ -28,11 +47,32 @@ Praktikum Jaringan Komputer Modul 1 I09
 ![Part 1](https://media.discordapp.net/attachments/1153305482438660178/1154416089577553970/image.png?width=919&height=702)
 ![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154416089908916375/Screenshot_2023-09-18_192001.png?width=899&height=150)
 
+Explanation :
+With query below, we can check how many packet we get from the query
+```
+ip.dst == 184.87.193.88
+```
+Then we will know how many packet inside with this one being 6
+
 # Flag 8
 ![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154416417022681188/image.png?width=583&height=105)
+
+Explanation :
+We use the query below to answer the question
+```
+tcp.dstport == 80 || udp.dstport == 80
+```
+because we need to find the port of the destination of tcp or udp either way
 
 # Flag 9
 
 # Flag 10
 ![Part 1](https://media.discordapp.net/attachments/1153305482438660178/1154417029923737720/image.png?width=1248&height=702)
 ![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154417030326394960/image.png?width=1099&height=177)
+
+Explanation :
+with the query
+```
+telnet
+```
+then we will find the TELNET protocols inside wireshark. then we check the one with the same requirement inside the data being `[username]:[password]` and the correct answer is `dhafin:kesayangannyak0k0`
