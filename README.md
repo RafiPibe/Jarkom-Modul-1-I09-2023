@@ -102,7 +102,7 @@ ip.src == 10.51.40.1 && ip.dst != 10.39.55.34
 IP.src == 10.51.40.1 means that it filter the IP with the source of 10.51.40.1, while IP.dst != 10.39.55.34 is to filter where the IP destination is not 10.39.55.34
 
 # Flag 10
-![Part 1](https://media.discordapp.net/attachments/1153305482438660178/1154417029923737720/image.png?width=1248&height=702)
+![Part 1](https://media.discordapp.net/attachments/809357974018719754/1154714690790887475/image.png?width=937&height=702)
 ![Terminal](https://media.discordapp.net/attachments/1153305482438660178/1154417030326394960/image.png?width=1099&height=177)
 
 Explanation :
