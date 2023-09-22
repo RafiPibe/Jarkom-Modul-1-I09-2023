@@ -68,7 +68,11 @@ This is to get the terminal command, which is `nc 10.21.78 1111`, Then we procee
 The answer to question A is 60 packets. The B answer is 25. With the help of Google, we found that SMPT port is 25. C answer is the public IP which is `74.53.140.153`. 
 We can check them because all the IPs other than that is a private.
 
-# Flag 6
+# Flag 6 (Revisi)
+![Part 1](https://cdn.discordapp.com/attachments/1153305482438660178/1154771927714496603/Screen_Shot_2023-09-22_at_20.28.46.png)
+![Terminal](https://cdn.discordapp.com/attachments/1153305482438660178/1154771927433486426/Screen_Shot_2023-09-22_at_20.30.27.png)
+
+It can be seen from line 7812 that the source address is 104.18.14.101, and one of the hint told us that a1 e5 u21 shows alphabet. So, we need to change the ip source address of 7812 into an alphabet and the result would then be ```10 -> J, 4 -> D, 18 -> R, 14 -> N, 10 -> J, and 1 -> A.``` Therefore the result is JDRNJA. 
 
 # Flag 7
 ![Part 1](https://media.discordapp.net/attachments/1153305482438660178/1154416089577553970/image.png?width=919&height=702)
