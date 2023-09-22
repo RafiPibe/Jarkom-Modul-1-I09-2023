@@ -18,7 +18,7 @@ Using query such as below
 ```
 ftp
 ```
-we can check the FTP protocol to see the sequence numbers and acknowledge number.
+we can check the FTP protocol to see the sequence numbers and acknowledge number and find the one with the info `STOR`.
 on point a we are told to answer what is the sequence number (raw) on the packet with the answer being `258040667`.
 Then point b, we are told to answer the acknowledge number (raw) on the packet with the answer being `1044861039`.
 after that, we are needed to search the response of the activity, that is the number after 147, and that is 149.
